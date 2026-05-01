@@ -1,4 +1,4 @@
-## README.md## Django Chatbot Web App
+## Django Chatbot Web App
 A responsive Django-based chatbot application featuring a clean Bootstrap UI. This project supports session-based chat history, dynamic message rendering, and a hybrid backend that uses simple rule-based logic with an optional Machine Learning prediction function.
 ------------------------------
 ## 🚀 Features
