@@ -32,44 +32,56 @@ A responsive Django-based chatbot application featuring a clean Bootstrap UI. Th
 ------------------------------
 ## ⚙️ Installation & Setup
 
-   1. Clone the Repository
-   
-       git clone https://github.com
-       cd Django-Chatbot-Web-App
-   
-   2. Create a Virtual Environment
-   
-       python -m venv venv
-       source venv/bin/activate  # On Windows: venv\Scripts\activate
-   
-   3. Install Dependencies
-       (Ensure you have Django and necessary ML libraries installed)
-       
-       pip install django pandas numpy  # Add other dependencies as needed
-   
-   4. Run Migrations
-       
-       python manage.py migrate
-   
-   5. Start the Server
-   
-       python manage.py runserver
-   
-   6. Access the App
-       Open your browser and go to http://127.0.0.
+### 1️⃣ Clone the repository
+  git clone https://github.com/abhaysingh-coder/Django-Chatbot-Web-App
+  cd Django-Chatbot-Web-App
 
-------------------------------
+### 2️⃣ Create virtual environment
+python -m venv venv
+venv\Scripts\activate
+
+### 3️⃣ Install dependencies
+pip install django, pandas, numpy
+
+### 4️⃣ Apply migrations
+python manage.py migrate
+
+### 5️⃣ Run the server
+python manage.py runserver
+
+---
+
+## 🎯 Learning Outcomes
+
++ Understanding Django project structure: Learn how to organize applications, settings, and assets within a professional framework.
++ Implementing CRUD operations: Gain experience in creating, reading, updating, and deleting chat messages and session data.
++ Working with Django ORM and SQLite: Master database interactions using Python objects to store and retrieve chat history.
++ Connecting frontend templates with backend logic: Learn to bridge Django’s Python backend with HTML/CSS to create a dynamic user experience.
++ Using Bootstrap for responsive UI: Build a modern, mobile-friendly chat interface that looks great on any device.
+
+---
+
+## 📌 Future Improvements
+
++ Integration of LLMs: Implement advanced APIs, such as OpenAI (GPT) or Google Gemini, to replace simple rule-based logic for more natural conversations.
++ User Authentication: Implement a Login/Sign-up system to allow users to save chat history across different devices.
++ WebSockets (Django Channels): Transition from standard HTTP requests to WebSockets for real-time messaging.
++ Voice Recognition: Add Speech-to-Text and Text-to-Speech capabilities to allow users to interact with the bot using voice.
++ Enhanced NLP: Improve the local ML model to better handle intent recognition and complex multi-turn dialogues.
++ Dashboard Analytics: Create an admin panel to visualize chat statistics, common user queries, and bot performance metrics.
+
+---
+
 ## 🧠 Usage
 
 * Rule-based Chat: The bot looks for specific keywords in the Data/ folder to provide instant answers.
 * ML Integration: For complex queries, the app can be configured to use the model stored in the Model/ directory to predict the best response.
 
-------------------------------
-## 🤝 Contributing
-    Contributions are welcome! Feel free to open an Issue or submit a Pull Request to improve the chatbot's logic or UI.
-------------------------------
-## 📄 License
-    This project is open-source. Please check the repository for specific licensing details.
-------------------------------
-## Developed by Abhay Singh
+---
+
+## 👨‍💻 Author
+
+Abhay Singh
+
+---
 
