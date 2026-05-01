@@ -82,6 +82,3 @@ python manage.py runserver
 ## 👨‍💻 Author
 
 Abhay Singh
-
----
-
