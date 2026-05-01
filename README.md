@@ -34,29 +34,29 @@ A responsive Django-based chatbot application featuring a clean Bootstrap UI. Th
 
    1. Clone the Repository
    
-   git clone https://github.com
-   cd Django-Chatbot-Web-App
+       git clone https://github.com
+       cd Django-Chatbot-Web-App
    
    2. Create a Virtual Environment
    
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
+       python -m venv venv
+       source venv/bin/activate  # On Windows: venv\Scripts\activate
    
    3. Install Dependencies
-   (Ensure you have Django and necessary ML libraries installed)
-   
-   pip install django pandas numpy  # Add other dependencies as needed
+       (Ensure you have Django and necessary ML libraries installed)
+       
+       pip install django pandas numpy  # Add other dependencies as needed
    
    4. Run Migrations
-   
-   python manage.py migrate
+       
+       python manage.py migrate
    
    5. Start the Server
    
-   python manage.py runserver
+       python manage.py runserver
    
    6. Access the App
-   Open your browser and go to http://127.0.0.
+       Open your browser and go to http://127.0.0.
 
 ------------------------------
 ## 🧠 Usage
@@ -66,11 +66,10 @@ A responsive Django-based chatbot application featuring a clean Bootstrap UI. Th
 
 ------------------------------
 ## 🤝 Contributing
-Contributions are welcome! Feel free to open an Issue or submit a Pull Request to improve the chatbot's logic or UI.
+    Contributions are welcome! Feel free to open an Issue or submit a Pull Request to improve the chatbot's logic or UI.
 ------------------------------
 ## 📄 License
-This project is open-source. Please check the repository for specific licensing details.
+    This project is open-source. Please check the repository for specific licensing details.
 ------------------------------
-Developed by Abhay Singh
-Would you like me to add a specific section for the machine learning model details found in your index.ipynb?
+## Developed by Abhay Singh
 
