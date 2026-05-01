@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot</title>
+
+    <!-- Favicon -->
+    {% load static %}
+    <link rel="icon" type="image/x-icon" href="{% static 'icon.png' %}">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div class="container-fluid mx-auto">
+        <div class="row">
+            <div class="col-sm-5 card mx-auto my-5 p-5" style="background-color: rgba(0, 213, 255, 0.2);">
+                <a href="{% url 'reset_session' %}" class="btn btn-sm">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            {% load static %}
+                            <img src="{% static 'bot avatar.png' %}" alt="" class="img-fluid h-100 w-100">
+                        </div>
+                        <div class="col-sm-9 my-4">
+                            <h3 class="text-primary mb-0 mt-3">Chat with</h3>
+                            <h2 class="text-primary mb-0"></h2class>Chatbot</h2>
+                        </div>
+                    </div>
+                </a>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <p class="text-primary">We typically Reply in Few Minutes</p>
+                    </div>
+                </div>
+                <div class="row"> 
+                    <div class="card-body p-2">
+                        <div id="chatBox" class="border rounded p-2 bg-light" style="height: 250px; scrollbar-width: none; overflow-y: auto;">
+                             {% if messages %}
+                                {% for msg in messages %}
+                                    {% if msg.sender == "user" %}
+                                        <div class="text-start mb-2">
+                                            <i class="fa-solid fa-circle-user fa-2xl text-primary" ></i>
+                                            <span class="badge bg-primary">{{ msg.text }}</span>
+                                        </div>
+                                    {% else %}
+                                        <div class="text-end mb-2">
+                                            <span class="badge bg-secondary">{{ msg.text }}</span>
+                                            <i class="fa-solid fa-robot fa-2xl text-secondary"></i>
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+                            {% else %}
+                                <p class="text-center fw-bold fst-italic">
+                                    Hello How can I help you
+                                </p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <form method="post" class="input-group">
+                        {% csrf_token %}
+                        <div class="col-sm-11 mx-auto">
+                            <input type="text" class="form-control" name="message" placeholder="Type your message..." required>
+                        </div>
+                        <div class="col-sm-1 mx-auto">
+                            <button class="btn btn-primary">
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!-- JS-->
+    <script>
+        window.onload = function () {
+            const chatBox = document.getElementById("chatBox");
+            chatBox.scrollTo({top: chatBox.scrollHeight});
+        };
+    </script>
+</body>
+</html>
