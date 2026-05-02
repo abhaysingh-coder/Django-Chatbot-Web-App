@@ -20,7 +20,7 @@ def home(request):
             elif "bye" in msg:
                 reply = "Goodbye! Have a nice day!"
             else:
-                reply = prediction(msg)
+                reply = prediction(msg, 'Chatbot')
             messages = messages + [{"sender": "bot", "text": reply}]
         request.session["messages"] = messages
         request.session.modified = True
