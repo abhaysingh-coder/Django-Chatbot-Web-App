@@ -1,7 +1,7 @@
 import pickle
 import os
 
-model_name = ['Flags', 'Category', 'Intent', 'Chatbot']
+model_name = ['Flags', 'Category', 'Intent']
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 model = {}
 for i in model_name:
@@ -17,7 +17,3 @@ def prediction(text, model_name):
         return model['Category'].predict([text])[0]
     elif model_name == 'Intent':
         return model['Intent'].predict([text])[0]
-    elif model_name == 'Chatbot':
-        return model['Chatbot'].predict([text])[0]
-    else:
-        return "Invalid model name"
