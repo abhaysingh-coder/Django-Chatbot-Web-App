@@ -90,7 +90,9 @@ By building this project, the following concepts and skills were developed:
 - Debugging and optimizing Django applications
 - Basic understanding of machine learning pipeline for NLP tasks
 - Structuring a full-stack web application project
+
 This project strengthens both backend development and foundational AI integration concepts.
+
 ------------------------------
 
 ## 📌 Future Improvements
