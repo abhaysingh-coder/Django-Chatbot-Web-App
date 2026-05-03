@@ -73,9 +73,9 @@ A responsive Django-based chatbot web application with a clean Bootstrap UI, ses
 
 ### 5️⃣ Run the server
     python manage.py runserver
-
 ------------------------------
 
+## 🎯 Learning Outcomes
 By building this project, the following concepts and skills were developed:
 
 - Understanding of Django framework architecture (MVT pattern)
