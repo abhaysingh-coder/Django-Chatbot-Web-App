@@ -58,25 +58,23 @@ A responsive Django-based chatbot web application with a clean Bootstrap UI, ses
 ## ⚙️ Installation & Setup
 
 ### 1️⃣ Clone the repository
-  git clone https://github.com/abhaysingh-coder/Django-Chatbot-Web-App
-  cd Django-Chatbot-Web-App
+    git clone https://github.com/abhaysingh-coder/Django-Chatbot-Web-App
+    cd Django-Chatbot-Web-App
 
 ### 2️⃣ Create virtual environment
-python -m venv venv
-venv\Scripts\activate
+    python -m venv venv
+    venv\Scripts\activate
 
 ### 3️⃣ Install dependencies
-pip install django, pandas, numpy
+    pip install django, pandas, numpy
 
 ### 4️⃣ Apply migrations
-python manage.py migrate
+    python manage.py migrate
 
 ### 5️⃣ Run the server
-python manage.py runserver
+    python manage.py runserver
 
----
-
-## 🎯 Learning Outcomes
+------------------------------
 
 ## 🎯 Learning Outcomes
 
@@ -96,8 +94,7 @@ By building this project, the following concepts and skills were developed:
 - Structuring a full-stack web application project
 
 This project strengthens both backend development and foundational AI integration concepts.
-
----
+------------------------------
 
 ## 📌 Future Improvements
 
@@ -117,7 +114,7 @@ The current system provides a basic chatbot web application, but it can be enhan
 - Optimize model performance and increase accuracy
 - Add logging and analytics for chatbot interactions
 - Implement REST API for mobile or third-party integration
----
+------------------------------
 
 ## 🧠 Usage
 
@@ -141,8 +138,7 @@ Follow these steps to use the chatbot application:
 8. The chatbot will process your input and display a response.
 9. Continue the conversation as needed.
 10. Click on Reset Chat to clear the current session and start a new conversation.
-
----
+------------------------------
 
 ## 👨‍💻 Author
 
