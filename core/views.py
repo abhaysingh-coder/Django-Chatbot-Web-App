@@ -9,11 +9,6 @@ from django.shortcuts import render, redirect, get_object_or_404
 
 # Create your views here.
 
-def reset_session(request):
-    request.session["messages"] = []
-    request.session.modified = True
-    return redirect('home')
-
 def login(request):
     if request.method == "POST":
         role = request.POST.get("role","").strip().lower()
@@ -82,3 +77,8 @@ def home(request):
         request.session["messages"] = messages
         request.session.modified = True
     return render(request, 'home.html', {"messages": messages})
+
+def reset_session(request):
+    request.session["messages"] = []
+    request.session.modified = True
+    return redirect('home')
