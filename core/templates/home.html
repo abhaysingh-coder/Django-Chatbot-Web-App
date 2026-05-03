@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Chatbot</title>
+    <title>Chatbot | Customer Support</title>
 
     <!-- Favicon -->
     {% load static %}
@@ -25,14 +25,22 @@
                             <img src="{% static 'bot avatar.png' %}" alt="" class="img-fluid h-100 w-100">
                         </div>
                         <div class="col-sm-9 my-4">
-                            <h3 class="text-primary mb-0 mt-3">Chat with</h3>
-                            <h2 class="text-primary mb-0"></h2class>Chatbot</h2>
+                            <h3 class="text-primary mb-0 mt-3 text-start">Chat with</h3>
+                            <h2 class="text-primary mb-0 text-start">Chatbot</h2>
                         </div>
                     </div>
                 </a>
                 <div class="row">
                     <div class="col-sm-12">
                         <p class="text-primary">We typically Reply in Few Minutes</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        {% if user.is_authenticated %}
+                        <p class="fw-bold m-0" style="color:#0d3b66;">Role: {{ user.role|title }}</p>
+                        <p class="fw-bold m-0" style="color:#0d3b66;">Email: {{ user.email }}</p>
+                        {% endif %}
                     </div>
                 </div>
                 <div class="row"> 
@@ -61,16 +69,12 @@
                     </div>
                 </div>
                 <div class="row">
-                    <form method="post" class="input-group">
+                    <form method="post" class="position-relative">
                         {% csrf_token %}
-                        <div class="col-sm-11 mx-auto">
-                            <input type="text" class="form-control" name="message" placeholder="Type your message..." required>
-                        </div>
-                        <div class="col-sm-1 mx-auto">
-                            <button class="btn btn-primary">
-                                <i class="fa-solid fa-paper-plane"></i>
-                            </button>
-                        </div>
+                        <input type="text" name="message" class="form-control rounded-pill border-0 ps-4 pe-5" placeholder="Type your message..." style="height:55px;" required>
+                        <button class="btn btn-primary rounded-circle position-absolute top-50 end-0 translate-middle-y me-4" type="submit">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
                     </form>
                 </div>
             </div>

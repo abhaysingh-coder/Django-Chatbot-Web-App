@@ -120,3 +120,6 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / "core" / "static",
 ]
+
+AUTH_USER_MODEL = 'core.User'
+LOGIN_URL = '/login/'
