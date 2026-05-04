@@ -17,19 +17,24 @@
 <body>
     <div class="container-fluid mx-auto">
         <div class="row">
-            <div class="col-sm-5 card mx-auto my-5 p-5" style="background-color: rgba(0, 213, 255, 0.2);">
-                <a href="{% url 'reset_session' %}" class="btn btn-sm">
-                    <div class="row">
-                        <div class="col-sm-3">
+            <div class="col-sm-5 card mx-auto my-4 p-5" style="background-color: rgba(0, 213, 255, 0.2);">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <a href="{% url 'reset_session' %}" class="btn btn-sm">
                             {% load static %}
                             <img src="{% static 'bot avatar.png' %}" alt="" class="img-fluid h-100 w-100">
-                        </div>
-                        <div class="col-sm-9 my-4">
-                            <h3 class="text-primary mb-0 mt-3 text-start">Chat with</h3>
-                            <h2 class="text-primary mb-0 text-start">Chatbot</h2>
-                        </div>
+                        </a>
                     </div>
-                </a>
+                    <div class="col-sm-8 mt-4">
+                        <h3 class="text-primary mb-0 mt-3 text-start">Chat with</h3>
+                        <h2 class="text-primary mb-2 text-start">Chatbot</h2>
+                    </div>
+                    <div class="col-sm-1">
+                        <a href="{% url 'logout' %}" class="btn btn-outline-danger btn-sm position-absolute top-0 end-0 m-2">
+                            <i class="fa-solid fa-sign-out-alt"></i> Logout
+                        </a>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-sm-12">
                         <p class="text-primary">We typically Reply in Few Minutes</p>
@@ -45,7 +50,7 @@
                 </div>
                 <div class="row"> 
                     <div class="card-body p-2">
-                        <div id="chatBox" class="border rounded p-2 bg-light" style="height: 250px; scrollbar-width: none; overflow-y: auto;">
+                        <div id="chatBox" class="border rounded p-2 bg-light" style="height: 259px; scrollbar-width: none; overflow-y: auto;">
                              {% if messages %}
                                 {% for msg in messages %}
                                     {% if msg.sender == "user" %}

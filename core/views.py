@@ -82,3 +82,7 @@ def reset_session(request):
     request.session["messages"] = []
     request.session.modified = True
     return redirect('home')
+
+def logout_view(request):
+    request.session.flush()
+    return redirect('login')
